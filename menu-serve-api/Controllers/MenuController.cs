@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace menu_serve_api.Controllers
 {
@@ -19,7 +18,6 @@ namespace menu_serve_api.Controllers
         [Route("item/{id}")]
         public JsonResult Item(int id)
         {
-
             return new JsonResult("Menu Item " + id.ToString());
         }
     }

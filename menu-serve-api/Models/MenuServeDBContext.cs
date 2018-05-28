@@ -8,7 +8,11 @@ namespace menu_serve_api.Models
 
         public MenuServeDBContext(DbContextOptions<MenuServeDBContext> options)
             : base(options)
-        { }
+        {
+            
+        }
+
+        // TODO Database builder using builder pattern?
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

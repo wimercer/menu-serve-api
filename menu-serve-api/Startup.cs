@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using menu_serve_api.Models;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using menu_serve_api.Models;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using menu_serve_api;
-
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace menu_serve_api
 {
@@ -32,10 +30,7 @@ namespace menu_serve_api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-
-                
-
-           }
+            }
 
             app.UseMvc();
         }

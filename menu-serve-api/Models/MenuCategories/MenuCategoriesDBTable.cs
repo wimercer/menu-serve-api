@@ -9,48 +9,47 @@ namespace menu_serve_api.Models
         public void Create(ModelBuilder builder)
         {
             // Table for Menu_Categories
-            builder.Entity<MenuCategory>().ToTable("Menu_Items");
+            builder.Entity<MenuCategory>().ToTable("Menu_Categories");
 
             // Fields for Menu_Categories
             builder.Entity<MenuCategory>()
                     .Property(i => i.ID)
-                        .HasColumnName("ID")
+                        .HasColumnType("INT")
                         .IsRequired(true)
                     ;
 
             builder.Entity<MenuCategory>()
                     .Property(i => i.Name)
                         .HasColumnName("Name")
+                        .HasColumnType("NVARCHAR(MAX)")
                         .IsRequired(true)
                     ;
 
             // Constraints for Menu_Categories
             builder.Entity<MenuCategory>().HasKey(i => i.ID);
 
-            builder.Entity<MenuCategory>();
-
             // Seed data to Menu_Categories
             builder.Entity<MenuCategory>().HasData(
                 new MenuCategory
             {
-                ID = 1,
-                Name = "Starters"
+                ID = MenuCategoryName.Starters.GetHashCode(),
+                Name = MenuCategoryName.Starters
             }, new MenuCategory
             {
-                ID = 2,
-                Name = "Mains"
+                ID = MenuCategoryName.Mains.GetHashCode(),
+                Name = MenuCategoryName.Mains
             }, new MenuCategory
             {
-                ID = 3,
-                Name = "Deserts"
+                ID = MenuCategoryName.Deserts.GetHashCode(),
+                Name = MenuCategoryName.Deserts
             }, new MenuCategory
             {
-                ID = 4,
-                Name = "Drinks"
+                ID = MenuCategoryName.Sides.GetHashCode(),
+                Name = MenuCategoryName.Sides
             }, new MenuCategory
             {
-                ID = 5,
-                Name = "Sides"
+                ID = MenuCategoryName.Drinks.GetHashCode(),
+                Name = MenuCategoryName.Drinks
             });
         }
     }

@@ -11,5 +11,8 @@ namespace menu_serve_api.Models
         public String Details { get; set; }
 
         public Decimal Price { get; set; }
+
+        public virtual MenuCategory MenuCategory { get; set; }
+
     }    
 }

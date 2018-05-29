@@ -8,11 +8,13 @@ namespace menu_serve_api.Models
     {
         // Declare Each table model
         private MenuItemsDBTable menuItemsDBTable = new MenuItemsDBTable();
+        private MenuCategoriesDBTable menuCategoriesDBTable = new MenuCategoriesDBTable();
 
         // Constructor 
         public MenuServeDB(MenuServeDBBuilder builder)
         {
             menuItemsDBTable = builder.menuItemsDBTable;         
+            menuCategoriesDBTable = builder.menuCategoriesDBTable;         
         }
     }
 
@@ -32,6 +34,7 @@ namespace menu_serve_api.Models
 
         // Declare each table model
         public MenuItemsDBTable menuItemsDBTable = new MenuItemsDBTable();
+        public MenuCategoriesDBTable menuCategoriesDBTable = new MenuCategoriesDBTable();
 
         public MenuServeDBBuilder(ModelBuilder builder)
         {
@@ -43,11 +46,17 @@ namespace menu_serve_api.Models
             menuItemsDBTable.Create(dbModelBuilder);
         }
 
+        private void CreateMenuCategories()
+        {
+            menuCategoriesDBTable.Create(dbModelBuilder);
+        }
+
         /* Director */
 
         public MenuServeDB Build()
         {
-            // Create each table for model
+            // Create each table for model in order!
+            this.CreateMenuCategories();
             this.CreateMenuItems();
             return new MenuServeDB(this);
         }

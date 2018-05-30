@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using menu_serve_api.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace menu_serve_api.Controllers
 {
@@ -7,18 +10,32 @@ namespace menu_serve_api.Controllers
     [Route("api/[controller]")]
     public class MenuController : Controller
     {
+        private MenuServeDBContext menuServeDBContext;
+
+        public MenuController(MenuServeDBContext dBcontext)
+        {
+            menuServeDBContext = dBcontext;
+        }
+
         //Get: {mydomain}/api/menu/
         [HttpGet]
         public JsonResult Index()
         {
-            return new JsonResult("Stub for menu data");
+            //return new JsonResult(menuServeDBContext.Query<MenuItem>());
+            return new JsonResult(menuServeDBContext.MenuItems
+                                                        .Include(c => c.MenuCategory)
+                                                        );
         }
 
-        //Get: {mydomain}/api/menu/1
+        ////Get: {mydomain}/api/menu/1
+        [HttpGet]
         [Route("item/{id}")]
         public JsonResult Item(int id)
         {
-            return new JsonResult("Menu Item " + id.ToString());
+            return new JsonResult(menuServeDBContext.MenuItems
+                                                        .Include(c => c.MenuCategory)
+                                                        .Where(i => i.ID == id)
+                                                        );
         }
     }
 }

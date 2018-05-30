@@ -25,6 +25,8 @@
     <Compile Remove="Migrations\20180529225459_test.Designer.cs" />
     <Compile Remove="Migrations\20180529230743_INITIAL_add_menu_items_and_categories.cs" />
     <Compile Remove="Migrations\20180529230743_INITIAL_add_menu_items_and_categories.Designer.cs" />
+    <Compile Remove="Migrations\20180530003227_test.cs" />
+    <Compile Remove="Migrations\20180530003227_test.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

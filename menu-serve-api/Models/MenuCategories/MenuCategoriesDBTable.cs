@@ -4,7 +4,7 @@ namespace menu_serve_api.Models
 {
     public class MenuCategoriesDBTable
     {
-        public virtual DbSet<MenuCategory> MenuItems { get; set; }
+        public virtual DbSet<MenuCategory> MenuCategories { get; set; }
 
         public void Create(ModelBuilder builder)
         {

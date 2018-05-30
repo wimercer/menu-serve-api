@@ -21,7 +21,7 @@ namespace menu_serve_api
         {
             services.AddMvc();
         
-            services.AddDbContext<MenuServeDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("menu_serve")));
+            services.AddDbContext<MenuServeDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("menu_serve"))); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -17,17 +17,16 @@ namespace menu_serve_api.Controllers
             menuServeDBContext = dBcontext;
         }
 
-        //Get: {mydomain}/api/menu/
+        // Get: {mydomain}/api/menu/
         [HttpGet]
         public JsonResult Index()
         {
-            //return new JsonResult(menuServeDBContext.Query<MenuItem>());
             return new JsonResult(menuServeDBContext.MenuItems
                                                         .Include(c => c.MenuCategory)
                                                         );
         }
 
-        ////Get: {mydomain}/api/menu/1
+        // Get: {mydomain}/api/menu/1
         [HttpGet]
         [Route("item/{id}")]
         public JsonResult Item(int id)

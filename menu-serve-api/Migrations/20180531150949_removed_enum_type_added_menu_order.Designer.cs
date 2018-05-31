@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using menu_serve_api.Models;
 
 namespace menuserveapi.Migrations
 {
     [DbContext(typeof(MenuServeDBContext))]
-    partial class MenuServeDBContextModelSnapshot : ModelSnapshot
+    [Migration("20180531150949_removed_enum_type_added_menu_order")]
+    partial class removed_enum_type_added_menu_order
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

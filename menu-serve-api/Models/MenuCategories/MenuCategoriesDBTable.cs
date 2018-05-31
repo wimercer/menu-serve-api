@@ -25,6 +25,13 @@ namespace menu_serve_api.Models
                         .IsRequired(true)
                     ;
 
+            // Fields for Menu_Categories
+            builder.Entity<MenuCategory>()
+                    .Property(i => i.DisplayOrder)
+                        .HasColumnType("INT")
+                        .IsRequired(true)
+                    ;
+
             // Constraints for Menu_Categories
             builder.Entity<MenuCategory>().HasKey(i => i.ID);
 
@@ -32,24 +39,29 @@ namespace menu_serve_api.Models
             builder.Entity<MenuCategory>().HasData(
                 new MenuCategory
             {
-                ID = MenuCategoryName.Starters.GetHashCode(),
-                Name = MenuCategoryName.Starters
+                ID = 1,
+                Name = "Starters",
+                DisplayOrder = 1
             }, new MenuCategory
             {
-                ID = MenuCategoryName.Mains.GetHashCode(),
-                Name = MenuCategoryName.Mains
+                ID = 2,
+                Name = "Mains",
+                DisplayOrder = 2
             }, new MenuCategory
             {
-                ID = MenuCategoryName.Deserts.GetHashCode(),
-                Name = MenuCategoryName.Deserts
+                ID = 3,
+                Name = "Drinks",
+                DisplayOrder = 5
             }, new MenuCategory
             {
-                ID = MenuCategoryName.Sides.GetHashCode(),
-                Name = MenuCategoryName.Sides
+                ID = 4,
+                Name = "Sides",
+                DisplayOrder = 4
             }, new MenuCategory
             {
-                ID = MenuCategoryName.Drinks.GetHashCode(),
-                Name = MenuCategoryName.Drinks
+                ID = 5,
+                Name = "Deserts",
+                DisplayOrder = 3
             });
         }
     }

@@ -30,6 +30,8 @@
     <Compile Remove="Migrations\20180529230743_INITIAL_add_menu_items_and_categories.Designer.cs" />
     <Compile Remove="Migrations\20180530003227_test.cs" />
     <Compile Remove="Migrations\20180530003227_test.Designer.cs" />
+    <Compile Remove="Migrations\20180531145830_removed_enum_type_added_menu_order.cs" />
+    <Compile Remove="Migrations\20180531145830_removed_enum_type_added_menu_order.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />

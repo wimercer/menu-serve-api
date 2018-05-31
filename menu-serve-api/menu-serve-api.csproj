@@ -12,9 +12,9 @@
     <DefineConstants>TRACE;NETCOREAPP2_1</DefineConstants>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>-->
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <!--<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
+  </PropertyGroup>-->
   <ItemGroup>
     <Compile Remove="Migrations\20180528205041_test.cs" />
     <Compile Remove="Migrations\20180528205041_test.Designer.cs" />

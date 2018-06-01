@@ -39,6 +39,7 @@ namespace menu_serve_api
                 app.UseDeveloperExceptionPage();
             }
 
+            // TODO  : work out how to automate migrations
             //app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope().ServiceProvider.GetRequiredService<MenuServeDBContext>().Database.Migrate();
 
             app.UseMvc();

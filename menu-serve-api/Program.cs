@@ -13,6 +13,8 @@ namespace menu_serve_api
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseKestrel()
+                .UseIISIntegration()
                 .Build();
     }
 }

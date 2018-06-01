@@ -7,6 +7,7 @@ namespace menu_serve_api.Controllers
 {
     // Route prefix for controller
     //Get: {mydomain}/api/menu/
+    [ApiController]
     [Route("api/[controller]")]
     public class MenuController : Controller
     {

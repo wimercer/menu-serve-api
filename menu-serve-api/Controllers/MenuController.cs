@@ -22,9 +22,10 @@ namespace menu_serve_api.Controllers
         [HttpGet]
         public JsonResult Index()
         {
-            return new JsonResult(menuServeDBContext.MenuItems
-                                                        .Include(c => c.MenuCategory)
-                                                        );
+            //return new JsonResult(menuServeDBContext.MenuItems
+            //                                            .Include(c => c.MenuCategory)
+            //                                            );
+            return new JsonResult("Yup... app working, it's responding with some json");
         }
 
         // Get: {mydomain}/api/menu/1

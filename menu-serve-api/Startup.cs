@@ -39,7 +39,7 @@ namespace menu_serve_api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope().ServiceProvider.GetRequiredService<MenuServeDBContext>().Database.Migrate();
+            //app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope().ServiceProvider.GetRequiredService<MenuServeDBContext>().Database.Migrate();
 
             app.UseMvc();
         }

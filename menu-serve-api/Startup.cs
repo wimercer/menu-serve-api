@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace menu_serve_api
 {
@@ -20,8 +21,14 @@ namespace menu_serve_api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-        
-            services.AddDbContext<MenuServeDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("menu_serve"))); 
+
+            // TODO : work out how to hide database connection string SECURITY!!!
+            string connectionString = Environment.GetEnvironmentVariable("MenuServeDatabase", EnvironmentVariableTarget.Machine);
+            //string connectionString = Configuration.GetConnectionString("menu_serve");
+
+            Console.WriteLine(connectionString);
+            
+            services.AddDbContext<MenuServeDBContext>(options => options.UseSqlServer(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

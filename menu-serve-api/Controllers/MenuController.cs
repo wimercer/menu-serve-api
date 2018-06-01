@@ -22,10 +22,9 @@ namespace menu_serve_api.Controllers
         [HttpGet]
         public JsonResult Index()
         {
-            //return new JsonResult(menuServeDBContext.MenuItems
-            //                                            .Include(c => c.MenuCategory)
-            //                                            );
-            return new JsonResult("Yup... app working, it's responding with some json");
+            return new JsonResult(menuServeDBContext.MenuItems
+                                                        .Include(c => c.MenuCategory)
+                                                        );
         }
 
         // Get: {mydomain}/api/menu/1
@@ -33,19 +32,10 @@ namespace menu_serve_api.Controllers
         [Route("item/{id}")]
         public JsonResult Item(int id)
         {
-
-
-            if (menuServeDBContext.Database.EnsureCreated())
-            {
-                return new JsonResult("Number " + id + "!");
-            }
-            else
-            {
-                return new JsonResult(menuServeDBContext.MenuItems
+            return new JsonResult(menuServeDBContext.MenuItems
                                                         .Include(c => c.MenuCategory)
                                                         .Where(i => i.ID == id)
                                                         );
-            }
         }
     }
 }

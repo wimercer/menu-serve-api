@@ -23,8 +23,8 @@ namespace menu_serve_api
             services.AddMvc();
 
             // TODO : work out how to hide database connection string SECURITY!!!
-            string connectionString = Environment.GetEnvironmentVariable("MenuServeDatabase", EnvironmentVariableTarget.Machine);
-            //string connectionString = Configuration.GetConnectionString("menu_serve");
+            //string connectionString = Environment.GetEnvironmentVariable("MenuServeDatabase", EnvironmentVariableTarget.Machine);
+            string connectionString = Configuration.GetConnectionString("menu_serve");
 
             Console.WriteLine(connectionString);
             

@@ -33,10 +33,19 @@ namespace menu_serve_api.Controllers
         [Route("item/{id}")]
         public JsonResult Item(int id)
         {
-            return new JsonResult(menuServeDBContext.MenuItems
+
+
+            if (menuServeDBContext.Database.EnsureCreated())
+            {
+                return new JsonResult("Number " + id + "!");
+            }
+            else
+            {
+                return new JsonResult(menuServeDBContext.MenuItems
                                                         .Include(c => c.MenuCategory)
                                                         .Where(i => i.ID == id)
                                                         );
+            }
         }
     }
 }

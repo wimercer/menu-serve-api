@@ -25,6 +25,8 @@
     <Compile Remove="Migrations\20180529230743_INITIAL_add_menu_items_and_categories.Designer.cs" />
     <Compile Remove="Migrations\20180530003227_test.cs" />
     <Compile Remove="Migrations\20180530003227_test.Designer.cs" />
+    <Compile Remove="Migrations\20180730150705_actual_menu_items.cs" />
+    <Compile Remove="Migrations\20180730150705_actual_menu_items.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />

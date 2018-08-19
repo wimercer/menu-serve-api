@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.IO;
 
 namespace menu_serve_api.Models
 {
@@ -58,7 +60,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Prawn Cocktail",
                     Details = "Prawns with a tangy seafood sauce. Served with brown bread and butter.",
                     Price = 4.30M,
-                    MenuCategoryID  = 1
+                    MenuCategoryID  = 1,
+                    Image = GetMenuItemImage(1)
                 },
                 new
                 {
@@ -66,7 +69,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Golden Breaded Mushrooms",
                     Details = "Button mushrooms in crispy golden breadcrumbs. Served with BBQ or garlic mayonnaise dip.",
                     Price = 4.20M,
-                    MenuCategoryID = 1
+                    MenuCategoryID = 1,
+                    Image = GetMenuItemImage(2)
                 },
                 new
                 {
@@ -74,7 +78,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Soup of the Day",
                     Details = "Please ask for today’s choice. Served with half a baguette and butter.",
                     Price = 3.30M,
-                    MenuCategoryID = 1
+                    MenuCategoryID = 1,
+                    Image = GetMenuItemImage(3)
                 },
                 new
                 {
@@ -82,7 +87,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Cajun Popcorn Chicken",
                     Details = "Cajun spiced popcorn chicken served with coleslaw and blue cheese sauce to dunk.",
                     Price = 4.50M,
-                    MenuCategoryID = 1
+                    MenuCategoryID = 1,
+                    Image = GetMenuItemImage(4)
                 },
                 new
                 {
@@ -90,7 +96,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Crispy Buttermilk Chicken",
                     Details = "Succulent strips of buttermilk chicken coated in crispy breadcrumbs, with sweet chilli sauce or garlic mayonnaise for dipping.",
                     Price = 4.50M,
-                    MenuCategoryID = 1
+                    MenuCategoryID = 1,
+                    Image = GetMenuItemImage(5)
                 },
 
                 /* Mains (ID = 2) */
@@ -101,7 +108,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Chicken Tikka Masala",
                     Details = "Chicken breast in a mild tikka masala sauce. Served with rice, naan bread, a poppadum and mango chutney.",
                     Price = 10.45M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(6)
                 },
                 new
                 {
@@ -109,7 +117,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Sausages & Mash",
                     Details = "Pork sausages on a bed of mashed potato, topped with red onion gravy. Served with garden peas.",
                     Price = 10.00M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(7)
                 },
                 new
                 {
@@ -117,7 +126,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Rack of Ribs",
                     Details = "Two half racks of sticky BBQ baby back pork ribs, covered in extra BBQ sauce. Served with chips, onion rings, corn on the cob and coleslaw.",
                     Price = 13.95M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(8)
                 },
                 new
                 {
@@ -125,7 +135,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Beer Battered Fish & Chips",
                     Details = " Beer battered fish served with chips, mushy peas and tartare sauce.",
                     Price = 0.00M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(9)
                 },
                 new
                 {
@@ -133,7 +144,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "10oz Rump Steak",
                     Details = "Garnished with onion rings and half a grilled tomato. Served with chips and peas.",
                     Price = 13.95M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(10)
                 },
                 new
                 {
@@ -141,7 +153,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "10oz Gammon Steak",
                     Details = "Grilled and crowned with a fried egg or pineapple ring. Served with chips and peas.",
                     Price = 11.75M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(11)
                 },
                 new
                 {
@@ -149,7 +162,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Chicken and Bacon Salad",
                     Details = "A classic combination of roasted chicken breast, sliced bacon and crispy garlic croutons. Mixed leaves, red onion, tomatoes, carrot, cucumber and a classic vinaigrette dressing on the side.",
                     Price = 11.00M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(12)
                 },
                 new
                 {
@@ -157,7 +171,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "The Swiss Burger",
                     Details = "A prime beef burger piled with fried onions, mushrooms and peppers, topped with melting Emmental cheese.",
                     Price = 11.25M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(13)
                 },
                 new
                 {
@@ -165,7 +180,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Lovely Rita Pizza",
                     Details = "Mozzarella and sliced tomatoes.",
                     Price = 11.45M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(14)
                 },
                 new
                 {
@@ -173,7 +189,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Mighty Meaty Pizza",
                     Details = "Pepperoni, Wiltshire ham, mini-meatballs, chipotle pulled chicken and Mozzarella.",
                     Price = 15.25M,
-                    MenuCategoryID = 2
+                    MenuCategoryID = 2,
+                    Image = GetMenuItemImage(15)
                 },
 
                 /* Drinks (ID = 3) */
@@ -184,7 +201,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Bottled Beer",
                     Details = "Finest beer brewed in Austria 5.5%.",
                     Price = 3.10M,
-                    MenuCategoryID = 3
+                    MenuCategoryID = 3,
+                    Image = GetMenuItemImage(16)
                 },
                 new
                 {
@@ -192,7 +210,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Bottled Cider",
                     Details = "Finest apple cider made in Cornwall 6%.",
                     Price = 3.00M,
-                    MenuCategoryID = 3
+                    MenuCategoryID = 3,
+                    Image = GetMenuItemImage(17)
                 },
                 new
                 {
@@ -200,7 +219,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Bottled Cola",
                     Details = "Cola made in America.",
                     Price = 2.00M,
-                    MenuCategoryID = 3
+                    MenuCategoryID = 3,
+                    Image = GetMenuItemImage(18)
                 },
                 new
                 {
@@ -208,7 +228,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Bottled Diet Cola",
                     Details = "Diet Cola made in America.",
                     Price = 1.80M,
-                    MenuCategoryID = 3
+                    MenuCategoryID = 3,
+                    Image = GetMenuItemImage(19)
                 },
                 new
                 {
@@ -216,7 +237,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Bottled Water",
                     Details = "Made from volcanic natural springs in France.",
                     Price = 1.80M,
-                    MenuCategoryID = 3
+                    MenuCategoryID = 3,
+                    Image = GetMenuItemImage(20)
                 },
 
                 /* Sides (ID = 4) */
@@ -227,7 +249,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Skin-on Fries",
                     Details = "Potato fries with the skin left on, cooked in olive oil.",
                     Price = 2.75M,
-                    MenuCategoryID = 4
+                    MenuCategoryID = 4,
+                    Image = GetMenuItemImage(21)
                 },
                 new
                 {
@@ -235,7 +258,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Onion Rings",
                     Details = "Stack of Beer battered onion rings cooked in olive oil.",
                     Price = 1.75M,
-                    MenuCategoryID = 4
+                    MenuCategoryID = 4,
+                    Image = GetMenuItemImage(22)
                 },
                 new
                 {
@@ -243,7 +267,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Garlic Ciabatta Bread",
                     Details = "Ciabatta bread mixed with garlic and herbs and baked.",
                     Price = 2.00M,
-                    MenuCategoryID = 4
+                    MenuCategoryID = 4,
+                    Image = GetMenuItemImage(23)
                 },
                 new
                 {
@@ -251,7 +276,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Chicken Katsu Fries",
                     Details = "Skin-on fries topped with buttermilk chicken pieces, katsu curry sauce and finished with spring onions and crispy onions.",
                     Price = 4.00M,
-                    MenuCategoryID = 4
+                    MenuCategoryID = 4,
+                    Image = GetMenuItemImage(24)
                 },
                 new
                 {
@@ -259,7 +285,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Side salad",
                     Details = "Rocket, red onion, and cherry tomatoes. Served on a lettuce leaf with caesar dressing.",
                     Price = 1.95M,
-                    MenuCategoryID = 4
+                    MenuCategoryID = 4,
+                    Image = GetMenuItemImage(25)
                 },
 
                 /* Deserts (ID = 5) */
@@ -270,7 +297,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Summer Fruits Cheesecake",
                     Details = "Rich cheesecake on a buttery biscuit base heaped with sweet peaches, tangy pineapple and blueberries, finished with a passion fruit glaze and dusted with toasted coconut. Served with vanilla flavour ice cream.",
                     Price = 4.45M,
-                    MenuCategoryID = 5
+                    MenuCategoryID = 5,
+                    Image = GetMenuItemImage(26)
                 },
                 new
                 {
@@ -278,7 +306,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Chocolate Fudge Cake",
                     Details = "Rich and gooey. Served cold or warm with vanilla flavour ice cream.",
                     Price = 3.95M,
-                    MenuCategoryID = 5
+                    MenuCategoryID = 5,
+                    Image = GetMenuItemImage(27)
                 },
                 new
                 {
@@ -286,7 +315,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Banana & Butterscotch Sundae",
                     Details = "Slices of banana and toffee sauce, in-between layers of banana and butterscotch, and vanilla flavour ice cream. Topped with squirty cream, caramel crunch pieces and a sugar curl.",
                     Price = 4.00M,
-                    MenuCategoryID = 5
+                    MenuCategoryID = 5,
+                    Image = GetMenuItemImage(28)
                 },
                 new
                 {
@@ -294,7 +324,8 @@ namespace menu_serve_api.Models
                     ShortDescription = "Apple Pie",
                     Details = "A slice of good old pie, served with custard.",
                     Price = 3.70M,
-                    MenuCategoryID = 5
+                    MenuCategoryID = 5,
+                    Image = GetMenuItemImage(29)
                 },
                 new
                 {
@@ -302,9 +333,17 @@ namespace menu_serve_api.Models
                     ShortDescription = "Jam Roly Poly",
                     Details = "Jam Roly Poly sponge served with custard.",
                     Price = 3.95M,
-                    MenuCategoryID = 5
+                    MenuCategoryID = 5,
+                    Image = GetMenuItemImage(30)
                 }
             );
+        }
+
+        public byte[] GetMenuItemImage(int id)
+        {
+            String imageLocation =  Directory.GetCurrentDirectory() + "/Images/MI-" + id + ".jpg";
+
+            return System.IO.File.ReadAllBytes(imageLocation);
         }
     }
 }

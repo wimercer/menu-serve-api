@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20180819153837_test.Designer.cs" />
     <Compile Remove="Migrations\20180819154356_test.cs" />
     <Compile Remove="Migrations\20180819154356_test.Designer.cs" />
+    <Compile Remove="Migrations\20180819165448_test.cs" />
+    <Compile Remove="Migrations\20180819165448_test.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0" />

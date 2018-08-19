@@ -341,7 +341,7 @@ namespace menu_serve_api.Models
                     Details = "Jam Roly Poly sponge served with custard.",
                     Price = 3.95M,
                     MenuCategoryID = 5,
-                    Image = GetMenuItemImage(29)
+                    Image = GetMenuItemImage(30)
                 }
             );
         }

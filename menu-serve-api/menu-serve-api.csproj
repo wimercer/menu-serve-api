@@ -3,36 +3,6 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Migrations\20180528205041_test.cs" />
-    <Compile Remove="Migrations\20180528205041_test.Designer.cs" />
-    <Compile Remove="Migrations\20180528205208_test.cs" />
-    <Compile Remove="Migrations\20180528205208_test.Designer.cs" />
-    <Compile Remove="Migrations\20180528205434_test.cs" />
-    <Compile Remove="Migrations\20180528205434_test.Designer.cs" />
-    <Compile Remove="Migrations\20180528223429_test.cs" />
-    <Compile Remove="Migrations\20180528223429_test.Designer.cs" />
-    <Compile Remove="Migrations\20180529195928_test.cs" />
-    <Compile Remove="Migrations\20180529195928_test.Designer.cs" />
-    <Compile Remove="Migrations\20180529203945_test.cs" />
-    <Compile Remove="Migrations\20180529203945_test.Designer.cs" />
-    <Compile Remove="Migrations\20180529204453_test.cs" />
-    <Compile Remove="Migrations\20180529204453_test.Designer.cs" />
-    <Compile Remove="Migrations\20180529221705_test.cs" />
-    <Compile Remove="Migrations\20180529221705_test.Designer.cs" />
-    <Compile Remove="Migrations\20180529225459_test.cs" />
-    <Compile Remove="Migrations\20180529225459_test.Designer.cs" />
-    <Compile Remove="Migrations\20180529230743_INITIAL_add_menu_items_and_categories.cs" />
-    <Compile Remove="Migrations\20180529230743_INITIAL_add_menu_items_and_categories.Designer.cs" />
-    <Compile Remove="Migrations\20180530003227_test.cs" />
-    <Compile Remove="Migrations\20180530003227_test.Designer.cs" />
-    <Compile Remove="Migrations\20180730150705_actual_menu_items.cs" />
-    <Compile Remove="Migrations\20180730150705_actual_menu_items.Designer.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\mi-1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace menu_serve_api.Models
 
         public Decimal Price { get; set; }
 
-        public byte[] Image { get; set; }
+        public String Image { get; set; }
 
         // Has one
         public virtual MenuCategory MenuCategory { get; set; }

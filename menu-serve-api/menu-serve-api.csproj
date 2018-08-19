@@ -29,6 +29,10 @@
     <Compile Remove="Migrations\20180730150705_actual_menu_items.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\mi-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>

@@ -42,6 +42,13 @@ namespace menu_serve_api.Models
                         .IsRequired(true)
                     ;
 
+            builder.Entity<MenuItem>()
+                    .Property(i => i.Image)
+                        .HasColumnName("Image")
+                        .HasColumnType("NVARCHAR(MAX)")
+                        .IsRequired(true)
+                    ;
+
             // Constraints for Menu_Items
             builder.Entity<MenuItem>().HasKey(i => i.ID);
 
@@ -339,11 +346,11 @@ namespace menu_serve_api.Models
             );
         }
 
-        public byte[] GetMenuItemImage(int id)
+        public String GetMenuItemImage(int id)
         {
-            String imageLocation =  Directory.GetCurrentDirectory() + "/Images/MI-" + id + ".jpg";
-
-            return System.IO.File.ReadAllBytes(imageLocation);
+            String imageLocation =  Directory.GetCurrentDirectory() + "/Images/mi-" + id + ".jpg";
+            
+            return Convert.ToBase64String(System.IO.File.ReadAllBytes(imageLocation));
         }
     }
 }

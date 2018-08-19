@@ -11,41 +11,6 @@
     <Compile Remove="Migrations\20180819154356_test.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\mi-1.jpg" />
-    <Content Include="Images\mi-10.jpg" />
-    <Content Include="Images\mi-11.jpg" />
-    <Content Include="Images\mi-12.jpg" />
-    <Content Include="Images\mi-13.jpg" />
-    <Content Include="Images\mi-14.jpg" />
-    <Content Include="Images\mi-15.jpg" />
-    <Content Include="Images\mi-16.jpg" />
-    <Content Include="Images\mi-17.jpg" />
-    <Content Include="Images\mi-18.jpg" />
-    <Content Include="Images\mi-19.jpg" />
-    <Content Include="Images\mi-2.jpg" />
-    <Content Include="Images\mi-20.jpg" />
-    <Content Include="Images\mi-21.jpg" />
-    <Content Include="Images\mi-22.jpg" />
-    <Content Include="Images\mi-23.jpg" />
-    <Content Include="Images\mi-24.jpg" />
-    <Content Include="Images\mi-25.jpg" />
-    <Content Include="Images\mi-26.jpg" />
-    <Content Include="Images\mi-27.jpg" />
-    <Content Include="Images\mi-28.jpg" />
-    <Content Include="Images\mi-29.jpg" />
-    <Content Include="Images\mi-3.jpg" />
-    <Content Include="Images\mi-30.jpg" />
-    <Content Include="Images\mi-4.jpg" />
-    <Content Include="Images\mi-5.jpg" />
-    <Content Include="Images\mi-6.jpg" />
-    <Content Include="Images\mi-7.jpg" />
-    <Content Include="Images\mi-8.jpg" />
-    <Content Include="Images\mi-9.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.0" />

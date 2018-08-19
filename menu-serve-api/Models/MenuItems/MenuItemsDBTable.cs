@@ -341,15 +341,15 @@ namespace menu_serve_api.Models
                     Details = "Jam Roly Poly sponge served with custard.",
                     Price = 3.95M,
                     MenuCategoryID = 5,
-                    Image = GetMenuItemImage(30)
+                    Image = GetMenuItemImage(29)
                 }
             );
         }
 
         public String GetMenuItemImage(int id)
         {
-            String imageLocation =  Directory.GetCurrentDirectory() + "/Images/mi-" + id + ".jpg";
-            
+            String imageLocation =  Directory.GetCurrentDirectory() + "/wwwroot/Images/mi-" + id + ".jpg";
+
             return Convert.ToBase64String(System.IO.File.ReadAllBytes(imageLocation));
         }
     }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace menuserveapi.Migrations
+namespace Migrations
 {
     public partial class menu_item_images : Migration
     {

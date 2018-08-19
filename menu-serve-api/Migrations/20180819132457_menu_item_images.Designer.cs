@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using menu_serve_api.Models;
 
-namespace menuserveapi.Migrations
+namespace Migrations
 {
     [DbContext(typeof(MenuServeDBContext))]
     [Migration("20180819132457_menu_item_images")]

@@ -5,10 +5,13 @@
   <ItemGroup>
     <Compile Remove="Migrations\20180819132052_menu_item_images.cs" />
     <Compile Remove="Migrations\20180819132052_menu_item_images.Designer.cs" />
+    <Compile Remove="Migrations\20180819153837_test.cs" />
+    <Compile Remove="Migrations\20180819153837_test.Designer.cs" />
+    <Compile Remove="Migrations\20180819154356_test.cs" />
+    <Compile Remove="Migrations\20180819154356_test.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-    <Folder Include="Images\" />
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0" />
@@ -22,6 +25,38 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Images\mi-1.jpg" />
+    <None Include="wwwroot\Images\mi-10.jpg" />
+    <None Include="wwwroot\Images\mi-11.jpg" />
+    <None Include="wwwroot\Images\mi-12.jpg" />
+    <None Include="wwwroot\Images\mi-13.jpg" />
+    <None Include="wwwroot\Images\mi-14.jpg" />
+    <None Include="wwwroot\Images\mi-15.jpg" />
+    <None Include="wwwroot\Images\mi-16.jpg" />
+    <None Include="wwwroot\Images\mi-17.jpg" />
+    <None Include="wwwroot\Images\mi-18.jpg" />
+    <None Include="wwwroot\Images\mi-19.jpg" />
+    <None Include="wwwroot\Images\mi-2.jpg" />
+    <None Include="wwwroot\Images\mi-20.jpg" />
+    <None Include="wwwroot\Images\mi-21.jpg" />
+    <None Include="wwwroot\Images\mi-22.jpg" />
+    <None Include="wwwroot\Images\mi-23.jpg" />
+    <None Include="wwwroot\Images\mi-24.jpg" />
+    <None Include="wwwroot\Images\mi-25.jpg" />
+    <None Include="wwwroot\Images\mi-26.jpg" />
+    <None Include="wwwroot\Images\mi-27.jpg" />
+    <None Include="wwwroot\Images\mi-28.jpg" />
+    <None Include="wwwroot\Images\mi-29.jpg" />
+    <None Include="wwwroot\Images\mi-3.jpg" />
+    <None Include="wwwroot\Images\mi-30.jpg" />
+    <None Include="wwwroot\Images\mi-4.jpg" />
+    <None Include="wwwroot\Images\mi-5.jpg" />
+    <None Include="wwwroot\Images\mi-6.jpg" />
+    <None Include="wwwroot\Images\mi-7.jpg" />
+    <None Include="wwwroot\Images\mi-8.jpg" />
+    <None Include="wwwroot\Images\mi-9.jpg" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Microsoft.NETCore.App" Version="2.1.0" />

@@ -348,7 +348,7 @@ namespace menu_serve_api.Models
 
         public String GetMenuItemImage(int id)
         {
-            String imageLocation =  Directory.GetCurrentDirectory() + "/wwwroot/Images/mi-" + id + ".jpg";
+            String imageLocation =  Directory.GetCurrentDirectory() + "/Images/mi-" + id + ".jpg";
 
             return Convert.ToBase64String(System.IO.File.ReadAllBytes(imageLocation));
         }
